@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void display();
+
+typedef struct _node
+{
+    void* data;
+    struct node* prev;
+    struct node* next;
+}_NODE;
+
+typedef struct _llist
+{
+    _NODE* head;
+    _NODE* tail;
+    int count;
+} LLIST;
+
+
+
+int main() 
+{  
+    struct _node* head;
+    struct _node* first=NULL;
+    struct _node* second=NULL;
+    struct _node* third=NULL;
+    struct _node* fourth=NULL;
+
+    first = (struct Node*)malloc(sizeof(struct _node));
+
+second = (struct Node*)malloc(sizeof(struct _node));
+
+third = (struct Node*)malloc(sizeof(struct _node));
+
+fourth = (struct Node*)malloc(sizeof(struct _node));
+
+first->data = 10; 
+
+second->data = 20;
+
+third->data = 30;
+
+fourth->data = 40;
+
+         first->next = second;
+
+         first->prev=NULL;
+
+         second->next = third;
+
+         second->prev=first;
+
+third->next = fourth;
+
+third->prev=second;
+
+fourth->next = NULL;
+
+fourth->prev = third;
+
+head=first;
+
+display(first);
+
+return 0;
+
+}
