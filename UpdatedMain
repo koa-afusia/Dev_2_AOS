@@ -203,7 +203,7 @@ struct node* delete(int key) {
    return current;
 }
 
-bool insertAfter(int key, int newKey, int data) {
+bool insertAtTarget(int key, int newKey, int data) {
    //start from the first link
    struct node *current = head; 
 	
@@ -265,8 +265,8 @@ void main() {
    //deleteLast();
    //displayForward();
 
-   printf("\nList , insert after key(4) : ");  
-   insertAfter(4,7, 13);
+   printf("\nList , inserted at target key : ");  
+   insertAtTarget(2,7, 13);
    displayForward();
 
    printf("\nList  , after delete key(4) : ");  
