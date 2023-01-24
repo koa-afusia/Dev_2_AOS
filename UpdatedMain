@@ -3,6 +3,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+/*TODO: Create dump list, combine delete before and after to delete list, 
+sort by values, unlink node, sort by values. Also we need to make sure that we make one display for delete
+this should give us a B.  
+*/ 
+
 struct node {
    int data;
    int key;
@@ -242,6 +247,8 @@ bool insertAtTarget(int key, int newKey, int data) {
    return true; 
 }
 
+//TODO: Create a display that will sort list by value 
+
 void main() {
    insertFirst(1,10);
    insertFirst(2,20);
@@ -250,11 +257,11 @@ void main() {
    insertFirst(5,40);
    insertFirst(6,56); 
 
-   printf("\nList (First to Last): ");  
+   printf("\nList (Last to First): ");  
    displayForward();
 	
    printf("\n");
-   printf("\nList (Last to First): "); 
+   printf("\nList (First to last): "); 
    displayBackward();
 
    //printf("\nList , after deleting first record: ");
