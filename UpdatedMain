@@ -16,10 +16,10 @@ struct node {
    struct node *prev;
 };
 
-//this link always point to first Link
+//first node in list
 struct node *head = NULL;
 
-//this link always point to last Link 
+//points to last node in list
 struct node *last = NULL;
 
 struct node *current = NULL;
@@ -124,11 +124,10 @@ void insertLast(int key, int data) {
    last = link;
 }
 
-//delete first item
-struct node* deleteLast() {
-
-   //save reference to first link
-   struct node *tempLink = head;
+//combine two functions deleteFirst and deleteLast
+struct node* deleteList() {
+    struct node *tempLink = head;
+    struct node *tempLink2 = last;
 	
    //if only one link
    if(head->next == NULL){
@@ -136,30 +135,19 @@ struct node* deleteLast() {
    } else {
       head->next->prev = NULL;
    }
-	
-   head = head->next;
-   //return the deleted link
-   return tempLink;
-}
 
-//delete link at the last location
-
-struct node* deleteFirst() {
-   //save reference to last link
-   struct node *tempLink = last;
-	
-   //if only one link
-   if(head->next == NULL) {
+   if(last->prev == NULL) {
       head = NULL;
    } else {
       last->prev->next = NULL;
    }
 	
+   head = head->next;
    last = last->prev;
-	
-   //return the deleted link
-   return tempLink;
+
+    return tempLink;
 }
+
 
 //delete a link with given key
 
