@@ -132,11 +132,7 @@ struct node* deleteList() {
    //if only one link
    if(head->next == NULL){
       last = NULL;
-   } else {
-      head->next->prev = NULL;
-   }
-
-   if(last->prev == NULL) {
+   } elif(last->prev == NULL) {
       head = NULL;
    } else {
       last->prev->next = NULL;
@@ -146,6 +142,7 @@ struct node* deleteList() {
    last = last->prev;
 
     return tempLink;
+    return tempLink2;
 }
 
 
