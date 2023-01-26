@@ -132,19 +132,20 @@ struct node* deleteList() {
    //if only one link
    if(head->next == NULL){
       last = NULL;
-   } elif(last->prev == NULL) {
-      head = NULL;
-   } else {
-      last->prev->next = NULL;
+   } else if(head->next == NULL){
+      head->next->prev = NULL;
+   }else if(head->next == NULL){
+      last->next->prev = NULL;
+   }else{
+      return printf("List is empty");
    }
-	
+
    head = head->next;
    last = last->prev;
 
     return tempLink;
     return tempLink2;
 }
-
 
 //delete a link with given key
 
