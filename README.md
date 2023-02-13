@@ -3,7 +3,7 @@
 
 Creates two basic data structures: Linked List and Stack written in C language
 
-##Table of Contents
+## Table of Contents
 - [Install](#install)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
