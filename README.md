@@ -1,5 +1,2 @@
-# Dev_2_AOS
+# C Data Structures
 
-Advanced Operating systems team 2
-
-Doubly linked list Documentation
