@@ -15,7 +15,7 @@ Creates two basic data structures: Linked List and Stack written in C language
 
 
 ## Maintainers
-
+@Ridgew120 
 
 ## Contributing
 These files were written for our C Data Structures project for the Advanced Operating Systems class
