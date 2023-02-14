@@ -1,7 +1,7 @@
 # C Data Structures
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-Creates two basic data structures: Linked List and Stack written in C language
+Creates two basic data structures: Doubly Linked List and Stack written in C language
 
 ## Table of Contents
 - [Install](#install)
