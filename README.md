@@ -4,7 +4,7 @@
 Creates two basic data structures: Doubly Linked List and Stack written in C language
 
 ## Table of Contents
-- [Install](#install)
+- [Functions](#functions)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
