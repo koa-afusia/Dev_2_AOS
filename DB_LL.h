@@ -5,19 +5,22 @@
 #include <stdlib.h>
 
 //node in linked list
-struct Node {
+struct Node 
+{
     int data;
     struct Node* prev;
     struct Node* next;
 };
 
 //entire linked list
-struct List {
+struct List 
+{
     struct Node* head;
     struct Node* tail;
+    int count;
 };
 
-//initialize empyt list
+//initialize empty list
 void initList(struct List* list);
 
 //delete a list
