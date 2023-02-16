@@ -6,8 +6,8 @@ Creates two basic data structures: Doubly Linked List and Stack written in C lan
 ## Table of Contents
 - [Structures](#structures)
 - [Functions](#functions)
-     - [Doubly Linked List Functions](##doublylinkedlistfunctions)
-     - [Stack Functions](##stackfunctions)
+     - [Doubly Linked List](##doublylinkedlist)
+     - [Stack](##stack)
 - [Usage](#usage)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
