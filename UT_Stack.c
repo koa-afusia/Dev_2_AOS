@@ -1,9 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <assert.h>
+#include "Stack.h"
 
-void test_push_and_pop() {
+void test_push_and_pop() 
+{
   struct Stack stack;
-  stack.top = -1;
-
+  initStack(&stack);
+//test pushing -1
   push(&stack, 1);
   push(&stack, 2);
   push(&stack, 3);
