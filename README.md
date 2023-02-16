@@ -62,7 +62,19 @@ We essentially have a few functions that helps us modify the doubly linked list 
         void sortList(struct List* list);
 
 ```
+
 ### - Stack
+```
+void initStack(struct Stack* stack);
+
+void push(struct Stack *stack, int value);
+
+int pop(struct Stack *stack);
+
+int peek(struct Stack* stack);
+
+int isEmpty(struct Stack* stack);
+```
 
 ## Usage
 In order to run the program, you can open the files in visual studio code and run it through the C language compiler extension within visual studio code. Run the doublylinkedlist file and the stack file in VSC C language compiler in order to get the result.
