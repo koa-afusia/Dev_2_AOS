@@ -12,7 +12,7 @@ Creates two basic data structures: Doubly Linked List and Stack written in C lan
 
 ## Stuctures
 ```
-//node in linked list
+% structs node in the linked list
 struct Node 
 {
     int data;
@@ -20,7 +20,7 @@ struct Node
     struct Node* next;
 };
 
-//entire linked list
+% structs entire linked list
 struct List 
 {
     struct Node* head;
