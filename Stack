@@ -1,63 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "Stack.h"
 #include "DB_LL.h"
 
-struct Stack {
-struct List myList;
-int top;
-};
-
-
-void push(struct Stack *stack, int value) {
-//call pushback from DB_LL
-pushBack(&stack->myList, value);
-stack->top++;
+void initStack(struct Stack* stack) 
+{
+    stack->myList.head = NULL;
+    stack->myList.tail = NULL;
+    stack->top = -1;
 }
 
-int pop(struct Stack *stack) {
-//stack empty? return -1
-if (isEmpty(stack)) {
-printf("Error: Stack is empty\n");
-return -1; 
+void push(struct Stack *stack, int value) 
+{
+    //call pushback from DB_LL.h
+    pushBack(&stack->myList, value);
+    stack->top++;
 }
+//void* -> memory manager 
+int pop(struct Stack *stack) 
+{
+    //stack empty? return -1
+    if (isEmpty(stack)) 
+    {
+        printf("Stack is empty\n");
+        return -1; //error message, needed
+    }
 
-int value = stack->myList.tail->data;
-//call unlinkNode from DB_LL
-unlinkNode(&stack->myList, value);
-stack->top--;
-return value;
+    int value = stack->myList.tail->data;
+    //call unlinkNode from DB_LL.h
+    unlinkNode(&stack->myList, value);
+    stack->top--;
+    return value;
 }
 
 //return value at top of stack
-int peek(struct Stack* stack) {
-//maybe delete this function because we already have isEmpty
-if (isEmpty(stack)) {
-return 0;
-}
-return stack->myList.head->data;
-}
-
-int isEmpty(struct Stack* stack) {
-return stack->myList.head == NULL;
-}
-
-int main() {
-struct Stack stack;
-stack.top = -1;
-
-push(&stack, 1);
-push(&stack, 2);
-push(&stack, 3);
-
-int i;
-for (i = 0; i < 3; i++) {
-    int poppedValue = pop(&stack);
-    if (poppedValue == -1) {
-        printf("An error occurred while trying to pop from the stack.\n");
-    } else {
-      printf("%d\n", poppedValue);
+int peek(struct Stack* stack) 
+{
+    //maybe delete this function because we already have isEmpty
+    if (isEmpty(stack)) 
+    {
+        return 0;
     }
-  }
+    return stack->myList.head->data;
+}
 
-return 0;
+int isEmpty(struct Stack* stack) 
+{
+    return stack->myList.head == NULL;
 }
