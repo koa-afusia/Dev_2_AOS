@@ -31,8 +31,36 @@ struct List
 
 ## Functions
 We essentially have a few functions that helps us modify the doubly linked list in different ways. We have functions that allow us to insert nodes before or after a target, destroy the list, find specific nodes within the list, and sorting the list by value. There are a few other functions we have created as well. As far as the stack goes, we also have a few functions that allows us to push and pop values on or off the stack and we are able to return a value from the stack. And of course, we have a function that allows us to check if the doubly linked list/stack is empty or not.
+    ### Doubly Linked List
+        ```    
+        //initialize empty list
+        void initList(struct List* list);
 
+        //delete a list
+        void deleteList(struct List* list);
 
+        //add a new node to end of list
+        void pushBack(struct List* list, int value);
+
+        //dump contents of list
+        void dumpList(const struct List* list);
+
+        //find node with given value
+        struct Node* findNode(const struct List* list, int value);
+
+        //add a new node before target node
+        void insertBefore(struct List* list, struct Node* target, int value);
+
+        //add a new node after target node
+        void insertAfter(struct List* list, struct Node* target, int value);
+
+        //unlink node with given value from list
+        void unlinkNode(struct List* list, int value);
+
+        //sort list in ascending order
+        void sortList(struct List* list);
+
+        ```
 ## Usage
 In order to run the program, you can open the files in visual studio code and run it through the C language compiler extension within visual studio code. Run the doublylinkedlist file and the stack file in VSC C language compiler in order to get the result.
 
