@@ -34,50 +34,56 @@ We essentially have a few functions that helps us modify the doubly linked list 
 
 ### - Doubly Linked List
 ```    
-        //initialize empty list
+        //initializes an empty list
         void initList(struct List* list);
 
-        //delete a list
+        //deletes a list
         void deleteList(struct List* list);
 
-        //add a new node to end of list
+        //adds a new node to end of list
         void pushBack(struct List* list, int value);
 
         //dump contents of list
         void dumpList(const struct List* list);
 
-        //find node with given value
+        //finds node with given value
         struct Node* findNode(const struct List* list, int value);
 
-        //add a new node before target node
+        //adds a new node before target node
         void insertBefore(struct List* list, struct Node* target, int value);
 
-        //add a new node after target node
+        //adds a new node after target node
         void insertAfter(struct List* list, struct Node* target, int value);
 
         //unlink node with given value from list
         void unlinkNode(struct List* list, int value);
 
-        //sort list in ascending order
+        //sorts list in ascending order
         void sortList(struct List* list);
 
 ```
 
 ### - Stack
 ```
+//initializes the stack 
 void initStack(struct Stack* stack);
 
+//pushes a value onto the stack
 void push(struct Stack *stack, int value);
 
+//pops a value off of the stack
 int pop(struct Stack *stack);
 
+//return value at the top of the stack
 int peek(struct Stack* stack);
 
+//checks if the stack is empty
 int isEmpty(struct Stack* stack);
 ```
 
 ## Usage
 In order to run the program, you can open the files in visual studio code and run it through the C language compiler extension within visual studio code. Run the doublylinkedlist file and the stack file in VSC C language compiler in order to get the result.
+
 
 ## Maintainers
 [@Ridgew120](https://github.com/Ridgew120)
