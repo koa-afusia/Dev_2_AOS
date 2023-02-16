@@ -3,14 +3,16 @@
 #include "DB_LL.h"
 
 //initialize empyt list
-void initList(struct List* list) {
+void initList(struct List* list) 
+{
     list->head = NULL;
     list->tail = NULL;
     list-> count = 0;
 }
 
 //delete a list
-void deleteList(struct List* list) {
+void deleteList(struct List* list) 
+{
     struct Node* current = list->head;
     while (current != NULL) {
         struct Node* next = current->next;
@@ -21,7 +23,8 @@ void deleteList(struct List* list) {
 }
 
 //add a new node to end of list
-void pushBack(struct List* list, int value) {
+void pushBack(struct List* list, int value) 
+{
     //allocate memory for new node
     struct Node* newNode = malloc(sizeof(struct Node));
     newNode->data = value;
@@ -41,7 +44,8 @@ void pushBack(struct List* list, int value) {
 }
 
 //dump contents of list
-void dumpList(const struct List* list) {
+void dumpList(const struct List* list) 
+{
     //start at the head of the list
     struct Node* current = list->head;
     //loop through the list
@@ -53,7 +57,8 @@ void dumpList(const struct List* list) {
 }
 
 //add a new node to beginning of list
-struct Node* findNode(const struct List* list, int value) {
+struct Node* findNode(const struct List* list, int value) 
+{
     struct Node* current = list->head;
     while (current != NULL) {
         if (current->data == value) {
@@ -65,7 +70,8 @@ struct Node* findNode(const struct List* list, int value) {
 }
 
 //add a new node to beginning of list
-void insertBefore(struct List* list, struct Node* target, int value) {
+void insertBefore(struct List* list, struct Node* target, int value) 
+{
     struct Node* newNode = malloc(sizeof(struct Node));
     //set data to value
     newNode->data = value;
@@ -83,7 +89,8 @@ void insertBefore(struct List* list, struct Node* target, int value) {
 }
 
 //add a new node to end of list
-void insertAfter(struct List* list, struct Node* target, int value) {
+void insertAfter(struct List* list, struct Node* target, int value) 
+{
     struct Node* newNode = malloc(sizeof(struct Node));
     //set data to value
     newNode->data = value;
@@ -99,7 +106,8 @@ void insertAfter(struct List* list, struct Node* target, int value) {
 }
 
 //unlink node with given value from list
-void unlinkNode(struct List* list, int value) {
+void unlinkNode(struct List* list, int value) 
+{
     //start at the head of the list
     struct Node* current = list->head;
     while (current != NULL) {
