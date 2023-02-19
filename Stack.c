@@ -10,14 +10,14 @@ void initStack(struct Stack* stack)
     stack->top = -1;
 }
 
-void push(struct Stack *stack, int value) 
+void push(struct Stack *stack, void* value) 
 {
     //call pushback from DB_LL.h
     pushBack(&stack->myList, value);
     stack->top++;
 }
 //void* -> memory manager 
-int pop(struct Stack *stack) 
+void* pop(struct Stack *stack) 
 {
     //stack empty? return -1
     if (isEmpty(stack)) 
@@ -26,7 +26,7 @@ int pop(struct Stack *stack)
         return -1; //error message, needed
     }
 
-    int value = stack->myList.tail->data;
+    void* value = stack->myList.tail->data;
     //call unlinkNode from DB_LL.h
     unlinkNode(&stack->myList, value);
     stack->top--;
@@ -34,7 +34,7 @@ int pop(struct Stack *stack)
 }
 
 //return value at top of stack
-int peek(struct Stack* stack) 
+void* peek(struct Stack* stack) 
 {
     //maybe delete this function because we already have isEmpty
     if (isEmpty(stack)) 
