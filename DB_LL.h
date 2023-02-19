@@ -7,7 +7,7 @@
 //node in linked list
 struct Node 
 {
-    int data;
+    void* data;
     struct Node* prev;
     struct Node* next;
 };
@@ -27,22 +27,22 @@ void initList(struct List* list);
 void deleteList(struct List* list);
 
 //add a new node to end of list
-void pushBack(struct List* list, int value);
+void pushBack(struct List* list, void* value);
 
 //dump contents of list
 void dumpList(const struct List* list);
 
 //find node with given value
-struct Node* findNode(const struct List* list, int value);
+struct Node* findNode(const struct List* list, void* value);
 
 //add a new node before target node
-void insertBefore(struct List* list, struct Node* target, int value);
+void insertBefore(struct List* list, struct Node* target, void* value);
 
 //add a new node after target node
-void insertAfter(struct List* list, struct Node* target, int value);
+void insertAfter(struct List* list, struct Node* target, void* value);
 
 //unlink node with given value from list
-void unlinkNode(struct List* list, int value);
+void unlinkNode(struct List* list, void* value);
 
 //sort list in ascending order
 void sortList(struct List* list);
