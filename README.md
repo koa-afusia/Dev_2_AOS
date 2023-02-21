@@ -86,6 +86,14 @@ int isEmpty(struct Stack* stack);
 ## Usage
 In order to run the program, you can open the files in visual studio code and run it through the C language compiler extension within visual studio code. Run the doublylinkedlist file and the stack file in VSC C language compiler in order to get the result.
 
+```
+gcc dlisttest.c -o dlisttest.exe
+gcc stacktest.c -o stacktest.exe
+
+gcc doublylinkedlist.c stack.c dlisttest.c stacktest.c -o dlisttest.exe stacktest.exe
+
+```
+
 
 ## Maintainers
 [@Ridgew120](https://github.com/Ridgew120)
