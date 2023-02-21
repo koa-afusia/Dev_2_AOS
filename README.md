@@ -91,7 +91,6 @@ gcc dlisttest.c doublylinkedlist.c -o dlisttest.exe
 gcc stacktest.c doublylinkedlist.c stack.c -o stacktest.exe
 
 *(gcc doublylinkedlist.c stack.c dlisttest.c stacktest.c -o dlisttest.exe stacktest.exe)
-
 ```
 
 
