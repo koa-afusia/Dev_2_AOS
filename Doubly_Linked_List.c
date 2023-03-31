@@ -23,7 +23,7 @@ void deleteList(struct List* list)
 }
 
 //add a new node to end of list
-void pushBack(struct List* list, void* value) 
+void pushBack(struct List* list, int value) 
 {
     //allocate memory for new node
     struct Node* newNode = malloc(sizeof(struct Node));
@@ -57,7 +57,7 @@ void dumpList(const struct List* list)
 }
 
 //add a new node to beginning of list
-struct Node* findNode(const struct List* list, void* value) 
+struct Node* findNode(const struct List* list, int value) 
 {
     struct Node* current = list->head;
     while (current != NULL) {
@@ -70,7 +70,7 @@ struct Node* findNode(const struct List* list, void* value)
 }
 
 //add a new node to beginning of list
-void insertBefore(struct List* list, struct Node* target, void* value) 
+void insertBefore(struct List* list, struct Node* target, int value) 
 {
     struct Node* newNode = malloc(sizeof(struct Node));
     //set data to value
@@ -89,7 +89,7 @@ void insertBefore(struct List* list, struct Node* target, void* value)
 }
 
 //add a new node to end of list
-void insertAfter(struct List* list, struct Node* target, void* value) 
+void insertAfter(struct List* list, struct Node* target, int value) 
 {
     struct Node* newNode = malloc(sizeof(struct Node));
     //set data to value
@@ -106,7 +106,7 @@ void insertAfter(struct List* list, struct Node* target, void* value)
 }
 
 //unlink node with given value from list
-void unlinkNode(struct List* list, void* value) 
+void unlinkNode(struct List* list, int value) 
 {
     //start at the head of the list
     struct Node* current = list->head;
