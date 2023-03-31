@@ -7,7 +7,7 @@
 //node in linked list
 struct Node 
 {
-    void* data;
+    int data;
     struct Node* prev;
     struct Node* next;
 };
