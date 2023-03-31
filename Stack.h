@@ -16,9 +16,9 @@ void initStack(struct Stack* stack);
 
 void push(struct Stack *stack, void* value);
 
-void* pop(struct Stack *stack);
+int pop(struct Stack *stack);
 
-void* peek(struct Stack* stack);
+int peek(struct Stack* stack);
 
 int isEmpty(struct Stack* stack);
 
