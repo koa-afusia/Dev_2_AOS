@@ -17,7 +17,7 @@ void push(struct Stack *stack, void* value)
     stack->top++;
 }
 //void* -> memory manager 
-void* pop(struct Stack *stack) 
+int pop(struct Stack *stack) 
 {
     //stack empty? return -1
     if (isEmpty(stack)) 
@@ -34,7 +34,7 @@ void* pop(struct Stack *stack)
 }
 
 //return value at top of stack
-void* peek(struct Stack* stack) 
+int peek(struct Stack* stack) 
 {
     //maybe delete this function because we already have isEmpty
     if (isEmpty(stack)) 
