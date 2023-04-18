@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "Doubly_Linked_List.c"
 
 //node in linked list
 struct Node 
@@ -27,22 +28,22 @@ void initList(struct List* list);
 void deleteList(struct List* list);
 
 //add a new node to end of list
-void pushBack(struct List* list, void* value);
+void pushBack(struct List* list, int value);
 
 //dump contents of list
 void dumpList(const struct List* list);
 
 //find node with given value
-struct Node* findNode(const struct List* list, void* value);
+struct Node* findNode(const struct List* list, int value);
 
 //add a new node before target node
-void insertBefore(struct List* list, struct Node* target, void* value);
+void insertBefore(struct List* list, struct Node* target, int value);
 
 //add a new node after target node
-void insertAfter(struct List* list, struct Node* target, void* value);
+void insertAfter(struct List* list, struct Node* target, int value);
 
 //unlink node with given value from list
-void unlinkNode(struct List* list, void* value);
+void unlinkNode(struct List* list, int value);
 
 //sort list in ascending order
 void sortList(struct List* list);
